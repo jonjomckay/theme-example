@@ -1,6 +1,7 @@
 test:
   override:
-    - phpunit .
+    - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
+    - phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml .
   post:
     - mkdir ${CIRCLE_ARTIFACTS}/example
     - mv css fonts js *.php style.css ${CIRCLE_ARTIFACTS}/example
