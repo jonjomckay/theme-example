@@ -2,11 +2,9 @@ test:
   override:
     - mkdir -p $CIRCLE_TEST_REPORTS/phpunit
     - phpunit --log-junit $CIRCLE_TEST_REPORTS/phpunit/junit.xml tests
-  post:
-    - mv src ${CIRCLE_ARTIFACTS}/example
 
 deployment:
   production:
     branch: master
     commands:
-      - rsync -avz ${CIRCLE_ARTIFACTS}/example ${DEPLOYMENT_LOCATION}
+      - rsync -avz src ${DEPLOYMENT_LOCATION}
