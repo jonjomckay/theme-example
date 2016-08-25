@@ -7,4 +7,4 @@ deployment:
   production:
     branch: master
     commands:
-      - rsync -avz src ${DEPLOYMENT_LOCATION}
+      - rsync -avz src/ ${DEPLOYMENT_LOCATION}/example
