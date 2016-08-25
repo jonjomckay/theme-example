@@ -1,6 +1,6 @@
 test:
   override:
-    - phpunit
+    - phpunit .
   post:
     - mkdir ${CIRCLE_ARTIFACTS}/example
     - mv css fonts js *.php style.css ${CIRCLE_ARTIFACTS}/example
