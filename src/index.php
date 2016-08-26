@@ -3,7 +3,7 @@
 <div class="row">
 
 	<div class="col-lg-12">
-		<h1>Posts</h1>
+		<h1>These are the Posts</h1>
 	</div>
 
 	<div class="col-md-8">
